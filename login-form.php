@@ -1,11 +1,13 @@
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -14,14 +16,15 @@
                 integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
                 crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-              integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
                 integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
                 crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+              integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
 
         <script type="text/javascript">
             $(document).ready(function () {
@@ -65,26 +68,31 @@
             div.card-footer
             {
 
-                margin-top:100px
+                margin-top:60px
             }
 
             .form-control-label
             {
                 font-weight:bold;
                 font-style: oblique;
-                font-size:1.2em;
+                font-size:1.15em;
                 line-height: 40px;
                 color:slategrey
 
             }
-            
-     
+
+
             div.card-block
             {
                 margin-top:40px    
             }
 
+            a[name='reg']
+            {
+                margin-left:10px;
 
+
+            }
         </style>
 
     </head>
@@ -107,19 +115,22 @@
                     <div class="input-group ">
                         <label for="user-email" class="form-control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">E-mail:</label>
                         <input class="form-control col-xs-9 col-sm-9 col-md-9 col-lg-9" id="user-email" name="user-email" type="email" placeholder="your email..."  required="required"/>
-                       <i class="input-group-addon">@</i>
+                        <i class="input-group-addon">@</i>
                     </div>
 
                     <br/>
                     <div class="input-group ">
-                        <label for="password" class="form-control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">Password:</label>
+                        <label for="pass" class="form-control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">Password:</label>
                         <input class="form-control col-xs-9 col-sm-9 col-md-9 col-lg-9"  id="pass" name="pass" type="password" placeholder="password here..." required="required"/>
-                         <i class="input-group-addon fa fa-key"></i>
+                        <i class="input-group-addon fa fa-key"></i>
                     </div>
+
+                    <br/>
+                    <a name="reg" href="register-form.php">Not Registered yet!</a>
 
 
                     <div class="card-footer">
-                        <input class="btn btn-secondary" type="submit" value="Submit"/>
+                        <input class="btn btn-secondary" type="submit" value="Login"/>
                         <input class="btn btn-secondary" type="reset" value="Clear"/>
                     </div>
                 </form>
