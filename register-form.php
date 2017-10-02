@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,14 +29,7 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-
-
-            });
-
-        </script>
+        <script src="assests/js/main.js"></script>
 
 
         <style type="text/css">
@@ -127,7 +119,7 @@
             <tr>
                 <td style="width:50%">
                     <div id="register" >
-                        <form method="get" action="">
+                        <form id="registerForm" method="post" >
 
                             <div class="w3-group">
 
@@ -175,6 +167,7 @@
                             </div>
 
                             <div style="margin-top:30px">
+                                <div id="errorOut" class="alert alert-danger" style="display:none" ></div>
                                 <input class="btn btn-secondary" type="submit" value="Register"/>
                                 <input class="btn btn-secondary" type="reset" value="Clear"/>
                             </div>
