@@ -1,5 +1,10 @@
 
+<?php
 
+define("__CONFIG__",true);
+require_once("conf/config.php");
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -26,14 +31,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
               integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-
-
-            });
-
-        </script>
+        <script src="assests/js/main.js"></script>
 
 
         <style type="text/css">
@@ -108,7 +106,7 @@
             </div>
             <div class="card-block">
 
-                <form role="form" method="get" action="">
+                <form id="loginForm" role="form" method="post" >
 
 
 
