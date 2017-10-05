@@ -11,7 +11,7 @@ forceDashboard();
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Login Page</title>
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
