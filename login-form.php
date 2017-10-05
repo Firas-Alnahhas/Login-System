@@ -54,7 +54,7 @@ require_once("conf/config.php");
 
             .custom
             {
-                height:400px;
+                height:420px;
                 border-color:azure;
                 border-width:thin;
                 background-color: whitesmoke;
@@ -67,7 +67,9 @@ require_once("conf/config.php");
             div.card-footer
             {
 
-                margin-top:60px
+                
+                position:relative;
+                top:60px
             }
 
             .form-control-label
@@ -83,7 +85,7 @@ require_once("conf/config.php");
 
             div.card-block
             {
-                margin-top:40px    
+                margin-top:30px    
             }
 
             a[name='reg']
@@ -125,11 +127,11 @@ require_once("conf/config.php");
                     </div>
 
                     <br/>
-                    <a name="reg" href="register-form.php">Not Registered yet!</a>
+                    <a name="reg" href="register-form.php">Or Register here...</a>
 
-
+                    <div id="errorOut" class="alert alert-danger" style="display:none;position:relative;top:10px;margin-bottom:-20px" ></div>
                     <div class="card-footer">
-                        <div id="errorOut" class="alert alert-danger" style="display:none" ></div>
+
                         <input id="submitLog" class="btn btn-secondary" type="button" value="Login"/>
                         <input class="btn btn-secondary" type="reset" value="Clear"/>
                     </div>

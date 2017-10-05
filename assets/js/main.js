@@ -58,7 +58,7 @@ $(document).ready(function(){
                         window.location=returnedData.redirect;
                     }
                     else if(returnedData.error!== undefined){
-                        alert(returnedData.error);
+                        $("#errorOut",regForm).show().text(returnedData.error);
                     }
                     else{
                         alert(returnedData.message);
@@ -115,7 +115,7 @@ $(document).ready(function(){
                         window.location=returnedData.redirect;
                     }
                     else if(returnedData.error!== undefined){
-                        alert(returnedData.error);
+                        $("#errorOut",logForm).show().text(returnedData.error);
                     }
                     else{
                         alert(returnedData.message);
