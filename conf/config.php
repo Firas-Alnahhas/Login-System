@@ -19,6 +19,9 @@ require_once("DB.php");
 require_once("filter.php");
 $connection=DB::getConnection();
 */
+
+require_once("functions.php");
+
 $dbhost="localhost";
 $dbuser="root";
 $dbpassword="empoleon_10";

@@ -3,7 +3,7 @@
 
 define("__CONFIG__",true);
 require_once("conf/config.php");
-
+forceDashboard();
 ?>
 
 <!DOCTYPE html>
