@@ -31,7 +31,8 @@ require_once("conf/config.php");
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
               integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
 
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js">           
+        </script>
 
 
         <style type="text/css">
@@ -128,7 +129,8 @@ require_once("conf/config.php");
 
 
                     <div class="card-footer">
-                        <input class="btn btn-secondary" type="submit" value="Login"/>
+                        <div id="errorOut" class="alert alert-danger" style="display:none" ></div>
+                        <input id="submitLog" class="btn btn-secondary" type="button" value="Login"/>
                         <input class="btn btn-secondary" type="reset" value="Clear"/>
                     </div>
                 </form>

@@ -44,10 +44,67 @@ $(document).ready(function(){
 
 
         //make ajax call to the server
-    
+
         //alert(window.location.pathname);
 
         $.ajax({url : "ajax/register.php",
+                data:data,
+                type:"POST",
+                dataType:"json",    
+                async:true,
+                success:function(returnedData){
+                    //if the server wants to redirect the user
+                    if(returnedData.redirect!== undefined){
+                        window.location=returnedData.redirect;
+                    }
+                    else if(returnedData.error!== undefined){
+                        alert(returnedData.error);
+                    }
+                    else{
+                        alert(returnedData.message);
+                    }
+                },
+                error:function(xhr,status,error){
+                    alert("error in ajax call!");
+                }});
+
+
+
+    });
+
+
+    //getting the login form informaton
+    $("#submitLog").click(function(event){
+
+
+        var logForm=$("#loginForm");
+
+        var data={
+            email:$("input[type='email']",logForm).val(),
+            password:$("input[type='password']",logForm).val(),
+        };
+
+
+        //some validation
+
+        if(data.email.length<6){
+            $("#errorOut",logForm).show().text("please enter a valid email address!");
+            return false;
+        }
+        else if(data.password.length<8){
+            $("#errorOut",logForm).show().text("please enter a password with at least 8 characters!");
+            return false;
+        }
+
+        //hide the alert if the user make it to here
+        $("#errorOut",logForm).hide();
+
+
+        //make ajax call to the server
+
+        //alert(window.location.pathname);
+
+        $.ajax({url : "ajax/login.php",
                 data:data,
                 type:"POST",
                 dataType:"json",    
@@ -76,6 +133,13 @@ $(document).ready(function(){
 
 
     });
+
+
+
+
+
+
+
 
 
 

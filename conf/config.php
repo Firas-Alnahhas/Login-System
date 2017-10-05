@@ -4,8 +4,13 @@ if(!defined('__CONFIG__')){
     exit("You do not have promission to access the file!");
 }
 
+
 //our config here....
 
+//sessions are always turned on
+if(!isset($_SESSION)){
+    session_start();
+}
 
 /*
 //including our php file for accessing the db
