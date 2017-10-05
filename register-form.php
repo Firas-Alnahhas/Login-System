@@ -1,3 +1,8 @@
+<?php 
+define("__CONFIG__",true);
+require_once("conf/config.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +34,10 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 
-        <script src="assests/js/main.js"></script>
+
+
+        <script src="assets/js/main.js">           
+        </script>
 
 
         <style type="text/css">
@@ -119,7 +127,7 @@
             <tr>
                 <td style="width:50%">
                     <div id="register" >
-                        <form id="registerForm" method="post" >
+                        <form id="registerForm">
 
                             <div class="w3-group">
 
@@ -139,7 +147,7 @@
 
                             <div class="w3-group">
                                 <label for="email" class="w3-label">E-Mail:</label>
-                                <input class="w3-input" id="firstName" name="email" type="email" placeholder="Email..."  required="required"/>
+                                <input class="w3-input" id="email" name="email" type="email" placeholder="Email..."  required="required"/>
 
                             </div>
 
@@ -163,12 +171,12 @@
 
                                 <label for="gender" class="w3-checkbox">Female</label>
 
-                                <input class=""  value="F" name="gender" type="radio"/>
+                                <input value="F" name="gender" type="radio"/>
                             </div>
 
                             <div style="margin-top:30px">
                                 <div id="errorOut" class="alert alert-danger" style="display:none" ></div>
-                                <input class="btn btn-secondary" type="submit" value="Register"/>
+                                <input id="submitReg" class="btn btn-secondary" value="Register" type="button" />
                                 <input class="btn btn-secondary" type="reset" value="Clear"/>
                             </div>
                         </form>
