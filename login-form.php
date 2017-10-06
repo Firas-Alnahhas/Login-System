@@ -34,6 +34,16 @@ forceDashboard();
         <script src="assets/js/main.js">           
         </script>
 
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $(window).resize(function(){
+                    $("#displayWidth").text(window.innerWidth);
+                });
+            });
+        </script>
+
 
         <style type="text/css">
 
@@ -54,20 +64,22 @@ forceDashboard();
 
             .custom
             {
-                height:420px;
+                height:400px;
                 border-color:azure;
                 border-width:thin;
                 background-color: whitesmoke;
                 position:relative;
                 top:100px;
-                left:30%;
-                box-shadow:1px 1px 1px azure
+                box-shadow:1px 1px 1px azure;
+                width:43%;
+                
+
             }
 
             div.card-footer
             {
 
-                
+
                 position:relative;
                 top:60px
             }
@@ -94,15 +106,38 @@ forceDashboard();
 
 
             }
+
+
+            @media only screen and (min-width:671px) and (max-width:1194px){
+                .custom
+                {  
+                   top:50px;
+                    width:70%;
+                }
+            }
+            
+            
+              @media only screen and (min-width:240px) and (max-width:670px){
+                .custom
+                {
+                    height:500px;
+                    left:0;
+                    margin:0 auto;
+                    top:40px;
+                    width:90%;
+                }
+                  
+             
+            }
         </style>
 
     </head>
     <body>
 
+        <div id="displayWidth"></div>
 
 
-
-        <div class="card custom col-xs-5 col-sm-5 col-md-5 col-lg-5" id="mainCard">
+        <div class="card custom container-fluid" id="mainCard">
 
             <div class="card-header">
                 <img src="images/logo.jpg" style="width:auto;height:40px" class="img-fluid card-img-top"/>
@@ -113,21 +148,21 @@ forceDashboard();
 
 
 
-                    <div class="input-group ">
+                    <div class="input-group row">
                         <label for="user-email" class="form-control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">E-mail:</label>
                         <input class="form-control col-xs-9 col-sm-9 col-md-9 col-lg-9" id="user-email" name="user-email" type="email" placeholder="your email..."  required="required"/>
                         <i class="input-group-addon">@</i>
                     </div>
 
                     <br/>
-                    <div class="input-group ">
+                    <div class="input-group row">
                         <label for="pass" class="form-control-label col-xs-3 col-sm-3 col-md-3 col-lg-3">Password:</label>
                         <input class="form-control col-xs-9 col-sm-9 col-md-9 col-lg-9"  id="pass" name="pass" type="password" placeholder="password here..." required="required"/>
                         <i class="input-group-addon fa fa-key"></i>
                     </div>
 
                     <br/>
-                    <a name="reg" href="register-form.php">Or Register here...</a>
+                    <a name="reg" style="font-style:oblique;font-weight:450" href="register-form.php">Create New Account...</a>
 
                     <div id="errorOut" class="alert alert-danger" style="display:none;position:relative;top:10px;margin-bottom:-20px" ></div>
                     <div class="card-footer">
