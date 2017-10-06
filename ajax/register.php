@@ -42,7 +42,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             exit();
         }
         
-        $data=array("message"=>"User Registered Successfully..");
+        $data=array("message"=>"User Registered Successfully. redirecting to login page.....",
+                   "redirect"=>"login-form.php");
         echo json_encode($data);
         exit();
 

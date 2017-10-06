@@ -53,16 +53,26 @@ $(document).ready(function(){
                 dataType:"json",    
                 async:true,
                 success:function(returnedData){
-                    //if the server wants to redirect the user
-                    if(returnedData.redirect!== undefined){
-                        window.location=returnedData.redirect;
+
+                    if(returnedData.message!== undefined && returnedData.redirect!== undefined){
+                        alert(returnedData.message);
+                        setTimeout(function(){ window.location=returnedData.redirect;},3000);
+
                     }
+
                     else if(returnedData.error!== undefined){
                         $("#errorOut",regForm).show().text(returnedData.error);
                     }
-                    else{
+                    else if(returnedData.message!== undefined){
                         alert(returnedData.message);
                     }
+
+                    //if the server wants to redirect the user
+                    else if (returnedData.redirect!== undefined){
+                        window.location=returnedData.redirect;
+                    }
+
+
                 },
                 error:function(xhr,status,error){
                     alert("error in ajax call!");
@@ -110,16 +120,26 @@ $(document).ready(function(){
                 dataType:"json",    
                 async:true,
                 success:function(returnedData){
-                    //if the server wants to redirect the user
-                    if(returnedData.redirect!== undefined){
-                        window.location=returnedData.redirect;
+
+                    if(returnedData.message!== undefined && returnedData.redirect!== undefined){
+                        alert(returnedData.message);
+                        setTimeout(function(){ window.location=returnedData.redirect;},3000);
+
                     }
+
                     else if(returnedData.error!== undefined){
-                        $("#errorOut",logForm).show().text(returnedData.error);
+                        $("#errorOut",regForm).show().text(returnedData.error);
                     }
-                    else{
+                    else if(returnedData.message!== undefined){
                         alert(returnedData.message);
                     }
+
+                    //if the server wants to redirect the user
+                    else if(returnedData.redirect!== undefined){
+                        window.location=returnedData.redirect;
+                    }
+
+
                 },
                 error:function(xhr,status,error){
                     alert("error in ajax call!");
